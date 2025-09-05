@@ -46,14 +46,14 @@ Key Findings from Literature
 
 The methodology follows a systematic 5-stage approach:
 
-### Process Flow:
+## Process Flow:
 1. **Data Preparation** → Dataset loading, cleaning, and preprocessing
 2. **Model Design** → Algorithm selection and architecture definition  
 3. **Model Training** → Implementation with hyperparameter optimization
 4. **Evaluation** → Performance assessment using multiple metrics
 5. **Implementation and Monitoring** → Deployment and continuous monitoring
 
-### 3.1 Feature Description
+## 3.1 Feature Description
 
 | Feature | Description |
 |---------|-------------|
@@ -68,7 +68,7 @@ The methodology follows a systematic 5-stage approach:
 | `PAY_AMT1` to `PAY_AMT6` | Previous payment amounts (NT dollars) |
 | `default.payment.next.month` | Target variable (1=Default, 0=Non-default) |
 
-### 3.2 Data Preparation Process
+## 3.2 Data Preparation Process
 
 The analysis follows a systematic approach:
 
@@ -107,30 +107,30 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 import matplotlib.pyplot as plt
 4.2 Data Loading and Preprocessing
-# Load the dataset
+## Load the dataset
 data = pd.read_csv('/data/notebook_files/CREDIT_RISK/Credit_default_dataset.csv')
 
-# Separate features and target
+## Separate features and target
 X = data.drop(columns=['default.payment.next.month'])
 y = data['default.payment.next.month']
 
-# Split the data into training and testing sets
+## Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardise features
+## Standardise features
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 4.3 Model Implementations
 4.3.1 Random Forest Model
-# Initialise and train Random Forest model
+## Initialise and train Random Forest model
 rf_model = RandomForestClassifier(n_estimators=10, random_state=10)
 rf_model.fit(X_train, y_train)
 
-# Predict on test set
+## Predict on test set
 y_pred_rf = rf_model.predict(X_test)
 
-# Evaluate performance
+## Evaluate performance
 accuracy_rf = accuracy_score(y_test, y_pred_rf)
 precision_rf = precision_score(y_test, y_pred_rf, average='weighted')
 recall_rf = recall_score(y_test, y_pred_rf, average='weighted')
@@ -151,14 +151,14 @@ F1 Score: 0.7816687648843269
 Support Vector Machine finds the optimal hyperplane that separates different classes with maximum margin. The algorithm is particularly effective for non-linear data when using kernel functions.
 ![SVM Hyperplane](src/images/svm_hyperplane.png)
  Figure 2: Hyperplane Support Vector Machine (Putri et al., 2020)
-# Initialise and train SVM model
+## Initialise and train SVM model
 svm_model = SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42)
 svm_model.fit(X_train_scaled, y_train)
 
-# Predict on test set
+## Predict on test set
 y_pred_svm = svm_model.predict(X_test_scaled)
 
-# Evaluate performance
+## Evaluate performance
 accuracy_svm = accuracy_score(y_test, y_pred_svm)
 precision_svm = precision_score(y_test, y_pred_svm, average='weighted')
 recall_svm = recall_score(y_test, y_pred_svm, average='weighted')
@@ -176,7 +176,7 @@ Precision: 0.8005514399578606
 Recall: 0.8185
 F1 Score: 0.7929811338886947
 4.3.3 Feedforward Neural Network
-# Initialise the Feedforward Neural Network model
+## Initialise the Feedforward Neural Network model
 nn_model = Sequential([
     Dense(units=64, activation='relu', input_shape=(X_train_scaled.shape[1],)),
     Dense(units=32, activation='relu'),
@@ -184,20 +184,20 @@ nn_model = Sequential([
     Dense(units=1, activation='sigmoid')
 ])
 
-# Compile the model
+## Compile the model
 nn_model.compile(optimizer=Adam(learning_rate=0.001),
                  loss='binary_crossentropy',
                  metrics=['accuracy'])
 
-# Train the model
+## Train the model
 nn_history = nn_model.fit(X_train_scaled, y_train, epochs=20, batch_size=32, 
                          validation_split=0.2, verbose=0)
 
-# Predict on test set
+## Predict on test set
 y_pred_nn_prob = nn_model.predict(X_test_scaled)
 y_pred_nn = (y_pred_nn_prob > 0.5).astype(int).flatten()
 
-# Evaluate performance
+## Evaluate performance
 accuracy_nn = accuracy_score(y_test, y_pred_nn)
 precision_nn = precision_score(y_test, y_pred_nn, average='weighted')
 recall_nn = recall_score(y_test, y_pred_nn, average='weighted')
@@ -216,7 +216,7 @@ Precision: 0.7965589328182285
 Recall: 0.8138333333333333
 F1 Score: 0.7993127967151252
 4.3.4 Neural Network with Backpropagation
-# Initialise the model with explicit backpropagation focus
+## Initialise the model with explicit backpropagation focus
 model_bp = Sequential([
     Dense(units=64, activation='relu', input_shape=(X_train_scaled.shape[1],)),
     Dense(units=32, activation='relu'),
@@ -224,16 +224,16 @@ model_bp = Sequential([
     Dense(units=1, activation='sigmoid')
 ])
 
-# Compile with focus on backpropagation optimization
+## Compile with focus on backpropagation optimization
 model_bp.compile(optimizer=Adam(learning_rate=0.001),
                  loss='binary_crossentropy',
                  metrics=['accuracy'])
 
-# Train with backpropagation
+## Train with backpropagation
 history_bp = model_bp.fit(X_train_scaled, y_train, epochs=20, batch_size=32, 
                          validation_split=0.2, verbose=0)
 
-# Predict and evaluate
+## Predict and evaluate
 y_pred_bp_prob = model_bp.predict(X_test_scaled)
 y_pred_bp = (y_pred_bp_prob > 0.5).astype(int).flatten()
 
@@ -266,28 +266,28 @@ f1_scores = [f1_rf, f1_svm, f1_nn]
 x = range(len(labels))
 plt.figure(figsize=(14, 8))
 
-# Plot accuracy
+## Plot accuracy
 plt.subplot(2, 2, 1)
 plt.bar(x, accuracies, color='b', alpha=0.7)
 plt.xticks(x, labels)
 plt.ylim([0, 1])
 plt.title('Accuracy')
 
-# Plot precision
+## Plot precision
 plt.subplot(2, 2, 2)
 plt.bar(x, precisions, color='g', alpha=0.7)
 plt.xticks(x, labels)
 plt.ylim([0, 1])
 plt.title('Precision')
 
-# Plot recall
+## Plot recall
 plt.subplot(2, 2, 3)
 plt.bar(x, recalls, color='r', alpha=0.7)
 plt.xticks(x, labels)
 plt.ylim([0, 1])
 plt.title('Recall')
 
-# Plot F1 Score
+## Plot F1 Score
 plt.subplot(2, 2, 4)
 plt.bar(x, f1_scores, color='m', alpha=0.7)
 plt.xticks(x, labels)
