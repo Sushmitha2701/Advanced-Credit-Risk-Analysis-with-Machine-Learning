@@ -256,7 +256,8 @@ Recall: 0.813
 F1 Score: 0.7930242971354144
 4.4 Performance Visualization
 4.4.1 Bar Plot Comparison
-# Performance visualization
+
+## Performance visualisation
 labels = ['Random Forest', 'SVM', 'Feedforward Neural Network']
 accuracies = [accuracy_rf, accuracy_svm, accuracy_nn]
 precisions = [precision_rf, precision_svm, precision_nn]
@@ -308,7 +309,8 @@ X Axis: Defines the three classifiers (Random Forest, Support Vector Machine, Ar
 ![Performance Comparison Bar Chart](src/images/performance_comparison_bars.png)
 Figure 4: Cross validation plot of Artificial Neural Network, Support Vector Machine and Random Forest (As created by author of report)
 4.4.2 Box Plot Analysis
-# Box plot for cross-validation analysis
+  
+## Box plot for cross-validation analysis
 def evaluate_nn_cv(X, y):
     """Function to evaluate neural network with cross-validation"""
     nn_model = Sequential([
@@ -335,7 +337,7 @@ def evaluate_nn_cv(X, y):
         'f1': f1_score(y, y_pred, average='weighted')
     }
 
-# Cross-validation setup
+## Cross-validation setup
 X_scaled = scaler.fit_transform(X)
 scorers = {
     'accuracy': make_scorer(accuracy_score),
@@ -349,7 +351,7 @@ classifiers = {
     'SVM': SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42)
 }
 
-# Evaluate classifiers with cross-validation
+## Evaluate classifiers with cross-validation
 results = {metric: [] for metric in scorers.keys()}
 
 for name, clf in classifiers.items():
@@ -358,12 +360,12 @@ for name, clf in classifiers.items():
     for metric in results.keys():
         results[metric].append(scores[metric])
 
-# Evaluate Neural Network
+## Evaluate Neural Network
 nn_metrics = [evaluate_nn_cv(X_scaled, y) for _ in range(5)]
 for metric in results.keys():
     results[metric].append([m[metric] for m in nn_metrics])
 
-# Create box plots
+## Create box plots
 plt.figure(figsize=(16, 12))
 for i, metric in enumerate(scorers.keys()):
     plt.subplot(2, 2, i + 1)
