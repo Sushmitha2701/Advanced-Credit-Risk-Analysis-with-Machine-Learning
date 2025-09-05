@@ -24,7 +24,7 @@ The primary objectives of this study are to:
 3. Establish relationships between borrower characteristics and default probability
 4. Provide insights for financial institutions to enhance their credit risk assessment processes
 Significance of the Study
-Traditional statistical methods like logistic regression and discriminant analysis have limitations when dealing with complex financial data. Machine learning offers promising alternatives by utilizing advanced algorithms to analyze vast ranges of data and identify complex patterns that may not be resolved through conventional approaches.
+Traditional statistical methods like logistic regression and discriminant analysis have limitations when dealing with complex financial data. Machine learning offers promising alternatives by utilizing advanced algorithms to analyse vast ranges of data and identify complex patterns that may not be resolved through conventional approaches.
 2. Literature Review
 Evolution of Credit Risk Models
 Credit risk assessment has evolved significantly from traditional statistical models to modern AI-based approaches. Early studies by FitzPatrick (1932) and the famous Altman model (1968) laid the foundation for statistical credit risk assessment.
@@ -117,13 +117,13 @@ y = data['default.payment.next.month']
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Standardize features
+# Standardise features
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 4.3 Model Implementations
 4.3.1 Random Forest Model
-# Initialize and train Random Forest model
+# Initialise and train Random Forest model
 rf_model = RandomForestClassifier(n_estimators=10, random_state=10)
 rf_model.fit(X_train, y_train)
 
@@ -176,7 +176,7 @@ Precision: 0.8005514399578606
 Recall: 0.8185
 F1 Score: 0.7929811338886947
 4.3.3 Feedforward Neural Network
-# Initialize the Feedforward Neural Network model
+# Initialise the Feedforward Neural Network model
 nn_model = Sequential([
     Dense(units=64, activation='relu', input_shape=(X_train_scaled.shape[1],)),
     Dense(units=32, activation='relu'),
@@ -216,7 +216,7 @@ Precision: 0.7965589328182285
 Recall: 0.8138333333333333
 F1 Score: 0.7993127967151252
 4.3.4 Neural Network with Backpropagation
-# Initialize the model with explicit backpropagation focus
+# Initialise the model with explicit backpropagation focus
 model_bp = Sequential([
     Dense(units=64, activation='relu', input_shape=(X_train_scaled.shape[1],)),
     Dense(units=32, activation='relu'),
@@ -489,7 +489,7 @@ Strategic Initiatives
 2. Employee Training: Develop training programs for staff on AI/ML model development, integration, and deployment
 3. Regulatory Collaboration: Work closely with regulators to ensure AI model compliance and ethical lending practices
 Technical Improvements
-1. Hyperparameter Optimization: Implement Grid Search or Randomized Search Cross-Validation for optimal model tuning
+1. Hyperparameter Optimization: Implement Grid Search or Randomised Search Cross-Validation for optimal model tuning
 2. Class Imbalance Handling: Use techniques like SMOTE, under-sampling, or class weights for skewed default distributions
 3. Real-time Monitoring: Establish continuous model performance monitoring and updating systems
 6.3 Future Research Directions
