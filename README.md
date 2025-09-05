@@ -265,7 +265,11 @@ print(f"Recall: {recall_bp}")
 print(f"F1 Score: {f1_bp}")
 
 Output:
+
+**Training Output:**
 188/188 [==============================] - 0s 1ms/step
+
+
 **Feedforward Neural Network with Backpropagation Performance:**
 
 | Metric | Value | Percentage |
