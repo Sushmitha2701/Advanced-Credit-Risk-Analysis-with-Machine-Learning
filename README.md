@@ -499,7 +499,7 @@ The implementation of AI/ML models has significant positive implications:
 
 7. Code Repository
 
-7.1 Repository Structure
+### 7.1 Repository Structure
 credit-risk-analysis/
 ├── README.md
 ├── backup/
@@ -519,6 +519,7 @@ credit-risk-analysis/
 │   └── utils/
 ├── requirements.txt
 └── other project files
+
 7.2 Installation and Usage
 # Clone the repository
 git clone https://github.com/Sushmitha2701/Advanced-Credit-Risk-Analysis-with-Machine-Learning.git
