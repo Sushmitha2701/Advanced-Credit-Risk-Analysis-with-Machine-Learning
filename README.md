@@ -78,6 +78,9 @@ Where:
 * TN = True Negatives
 * FP = False Positives
 * FN = False Negatives
+
+
+
 4. Implementation
 4.1 Environment Setup
 import pandas as pd
@@ -391,6 +394,8 @@ Performance Range Analysis:
 
 ![Extended Box Plot Comparison](src/images/extended_models_comparison.png)
 Figure 6: Extended model comparison including ensemble methods
+
+
 5. Analysis and Results
 5.1 Model Performance Summary
 Based on the comprehensive analysis, here are the exact performance results:
@@ -436,19 +441,21 @@ Random Forest
 Support Vector Machine
 * Kernel: RBF (Radial Basis Function) for non-linear data separation
 * Hyperplane: Optimal separation between default and non-default customers
-* Regularization: C=1.0 for balance between margin and training accuracy
+* Regularisation: C=1.0 for balance between margin and training accuracy
 Artificial Neural Network
 * Architecture:
     * Input layer: 24 features
     * Hidden layers: 64, 32, 16 neurons with ReLU activation
     * Output layer: 1 neuron with sigmoid activation
-* Optimization: Adam optimizer with learning rate 0.001
+* Optimisation: Adam optimiser with learning rate 0.001
 * Training: 20 epochs with batch size 32
 5.4 Statistical Analysis
 The cross-validation results and box plot analysis demonstrate:
 * Consistent performance across different data splits
 * Low variance in model predictions
 * SVM showing superior stability and accuracy
+
+
 6. Conclusion and Recommendations
 6.1 Main Conclusions
 This study successfully demonstrates that AI and ML models significantly outperform traditional statistical methods for credit risk assessment. The key findings include:
@@ -484,7 +491,10 @@ The implementation of AI/ML models has significant positive implications:
 * Improved Access: Better assessment capabilities can extend credit to previously underbanked populations
 * Reduced Bias: Objective algorithms can reduce human bias in lending decisions
 * Risk Mitigation: Enhanced prediction accuracy leads to better risk management and reduced defaults
+
+
 7. Code Repository
+
 7.1 Repository Structure
 credit-risk-analysis/
 ├── README.md
@@ -522,51 +532,66 @@ tensorflow>=2.8.0
 matplotlib>=3.5.0
 seaborn>=0.11.0
 jupyter>=1.0.0
+
+
 8. Visual Results Summary
+
+
 8.1 Complete Analysis Pipeline
 The methodology follows a systematic approach as illustrated in the framework diagram:
 1. Data Preparation - Dataset loading and preprocessing
 2. Model Design - Algorithm selection and architecture definition
-3. Model Training - Implementation with hyperparameter optimization
+3. Model Training - Implementation with hyperparameter optimisation
 4. Evaluation - Performance assessment using multiple metrics
 5. Implementation and Monitoring - Deployment considerations
+
+
 8.2 Technical Implementation Highlights
 Support Vector Machine Performance: The SVM hyperplane diagram demonstrates how the algorithm achieves optimal class separation with maximum margin between support vectors, enabling superior classification of default vs non-default customers.
-Performance Visualization Results:
+Performance Visualisation Results:
 * Bar chart analysis confirms SVM superiority across all metrics
 * Box plot statistical analysis validates model stability through cross-validation
 * Extended comparison includes ensemble methods for comprehensive evaluation
+
+
 8.3 Quantitative Results Verification
 Primary Model Performance (Exact Values):
 Random Forest Performance:
-Accuracy: 0.8071666666666667
-Precision: 0.7843208768356785
-Recall: 0.8071666666666667
-F1 Score: 0.7816687648843269
+	
+Accuracy: 	0.8071666666666667
+Precision: 	0.7843208768356785
+Recall: 	0.8071666666666667
+F1 Score: 	0.7816687648843269
 
 SVM Performance:
-Accuracy: 0.8185
-Precision: 0.8005514399578606
-Recall: 0.8185
-F1 Score: 0.7929811338886947
+Accuracy: 	0.8185
+Precision: 	0.8005514399578606
+Recall: 	0.8185
+F1 Score: 	0.7929811338886947
 
 Feedforward Neural Network Performance:
-Accuracy: 0.8138333333333333
-Precision: 0.7965589328182285
-Recall: 0.8138333333333333
-F1 Score: 0.7993127967151252
+Accuracy: 	0.8138333333333333
+Precision: 	0.7965589328182285
+Recall: 	0.8138333333333333
+F1 Score: 	0.7993127967151252
 
 Neural Network with Backpropagation Performance:
-Accuracy: 0.813
-Precision: 0.7931577610969767
-Recall: 0.813
-F1 Score: 0.7930242971354144
+Accuracy: 	0.813
+Precision: 	0.7931577610969767
+Recall: 	0.813
+F1 Score: 	0.7930242971354144
+
+
 8.4 Statistical Significance
 The box plot analysis reveals:
 * SVM achieves highest median performance with minimal variance
 * Cross-validation confirms consistent results across different data splits
 * Statistical distribution supports model selection recommendations
+
+
+
 9. Implementation Guide
+
 9.1 Complete Setup Instructions
 1. Clone Repository Structure
 2. Extract and Place Images in the src/images/ directory
@@ -585,8 +610,11 @@ References
 3. Khemakhem, S. (2015). Artificial Neural Network architecture for financial risk assessment.
 4. UCI Machine Learning Repository. Credit Card Default Dataset.
 5. Livshits, I. (2015). Recent developments in consumer credit and default literature. Journal of Economic Literature, 53(4), 765-804.
+6. 
 
 Technical Implementation Note: This research provides complete reproducible analysis with exact performance metrics, comprehensive visualisations, and statistical validation. The implementation follows academic standards while providing practical deployment guidelines for financial institutions.
 Repository maintained by: Sushmitha2701
+
+
 About
 Credit risk analysis using AI is about applying machine learning to assess the likelihood of a borrower defaulting on a loan. By using vast amounts of data, AI can improve accuracy, speed, and efficiency in evaluating creditworthiness compared to traditional methods
