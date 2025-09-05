@@ -284,7 +284,7 @@ plt.title('F1 Score')
 plt.tight_layout()
 plt.show()
 Output:
-![Performance Comparison Bar Chart](src/images/performance_comparison_bars.png)
+
 The bar chart analysis reveals detailed performance metrics across all four key evaluation criteria:
 Performance Analysis from Visualization:
 * Accuracy: SVM shows the highest accuracy, followed closely by Feedforward Neural Network, with Random Forest showing the lowest
@@ -292,6 +292,7 @@ Performance Analysis from Visualization:
 * Recall: Similar pattern with SVM outperforming other models
 * F1 Score: Consistent ranking with SVM achieving the best balanced performance
 X Axis: Defines the three classifiers (Random Forest, Support Vector Machine, Artificial Neural Network) Y Axis: Score range from 0 to 1 for accuracy, precision, recall and F1
+![Performance Comparison Bar Chart](src/images/performance_comparison_bars.png)
 Figure 4: Cross validation plot of Artificial Neural Network, Support Vector Machine and Random Forest (As created by author of report)
 4.4.2 Box Plot Analysis
 # Box plot for cross-validation analysis
@@ -372,10 +373,11 @@ Statistical Insights:
 * SVM demonstrates superior performance stability across all metrics
 * Neural Networks show competitive performance with good consistency
 * Random Forest exhibits higher variance but maintains competitive baseline performance
+
+![Box Plot Analysis](src/images/box_plot_detailed.png)
 Figure 5: Box Plot of Artificial Neural Network, Support Vector Machine and Random Forest (As created by author of report)
 4.5 Extended Model Comparison Analysis
 Additional Analysis - Alternative Model Performance:
-![Extended Box Plot Comparison](src/images/extended_models_comparison.png)
 This extended analysis includes comparison with additional models:
 1. Voting Classifier: Ensemble approach combining multiple algorithms
 2. Random Forest: Tree-based ensemble method
@@ -386,6 +388,8 @@ Performance Range Analysis:
 * Precision: Relatively stable across different approaches
 * Recall: Shows varying performance based on model complexity
 * F1 Score: Demonstrates the trade-off between precision and recall
+
+![Extended Box Plot Comparison](src/images/extended_models_comparison.png)
 Figure 6: Extended model comparison including ensemble methods
 5. Analysis and Results
 5.1 Model Performance Summary
