@@ -263,15 +263,21 @@ print(f"Accuracy: {accuracy_bp}")
 print(f"Precision: {precision_bp}")
 print(f"Recall: {recall_bp}")
 print(f"F1 Score: {f1_bp}")
+
 Output:
 188/188 [==============================] - 0s 1ms/step
-Feedforward Neural Network with Backpropagation Performance:
-Accuracy: 0.813
-Precision: 0.7931577610969767
-Recall: 0.813
-F1 Score: 0.7930242971354144
-4.4 Performance Visualization
-4.4.1 Bar Plot Comparison
+**Feedforward Neural Network with Backpropagation Performance:**
+
+| Metric | Value | Percentage |
+|--------|--------|------------|
+| Accuracy | 0.8130 | 81.30% |
+| Precision | 0.7932 | 79.32% |
+| Recall | 0.8130 | 81.30% |
+| F1 Score | 0.7930 | 79.30% |
+
+## 4.4 Performance Visualisation
+
+### 4.4.1 Bar Plot Comparison
 
 ## Performance visualisation
 labels = ['Random Forest', 'SVM', 'Feedforward Neural Network']
@@ -424,7 +430,7 @@ Performance Range Analysis:
 Figure 6: Extended model comparison including ensemble methods
 
 
-5. Analysis and Results
+##5. Analysis and Results
 ## 5.1 Model Performance Summary
 
 Based on the comprehensive analysis, here are the exact performance results:
