@@ -91,8 +91,8 @@ Where:
 * FP = False Positives
 * FN = False Negatives
 
-4. Implementation
-4.1 Environment Setup
+## 4. Implementation
+## 4.1 Environment Setup
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split, cross_val_score
@@ -145,11 +145,14 @@ print(f"Recall: {recall_rf}")
 print(f"F1 Score: {f1_rf}")
 
 Output:
-Random Forest Performance:
-Accuracy: 0.8071666666666667
-Precision: 0.7843208768356785
-Recall: 0.8071666666666667
-F1 Score: 0.7816687648843269
+## Random Forest Performance Results
+
+| Metric | Value | Percentage |
+|--------|--------|------------|
+| Accuracy | 0.8072 | 80.72% |
+| Precision | 0.7843 | 78.43% |
+| Recall | 0.8072 | 80.72% |
+| F1 Score | 0.7817 | 78.17% |
 
 ## 4.3.2 Support Vector Machine Model
 Support Vector Machine finds the optimal hyperplane that separates different classes with maximum margin. The algorithm is particularly effective for non-linear data when using kernel functions.
