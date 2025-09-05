@@ -38,30 +38,42 @@ Key Findings from Literature
 * Ensemble methods and hybrid models show superior performance
 * AI models can better handle non-linear and complex datasets
 * Feature selection and preprocessing are crucial for model performance
-3. Methodology
-3.1 Dataset Overview
-The dataset used for analysis contains:
-* Total instances: 30,000
-* Features: 25
-* Source: UCI Machine Learning Repository
+## 3. Methodology Framework
+
 ![Methodology Framework](src/images/methodology_framework.png)
- Figure 1: Credit Risk Assessment Methodology Framework (As created by the author of this report)
-Feature Description
-Feature	Description
-ID	Unique identification number for each customer
-LIMIT_BAL	Credit balance given to each customer (NT dollars)
-SEX	Gender (1=Male, 2=Female)
-EDUCATION	Education level (1=Graduate, 2=University, 3=High School, 4=Others)
-MARRIAGE	Marital status (1=Married, 2=Single, 3=Others)
-AGE	Customer age in years
-PAY_0 to PAY_6	Payment history from April to September 2005
-BILL_AMT1 to BILL_AMT6	Bill statement amounts (NT dollars)
-PAY_AMT1 to PAY_AMT6	Previous payment amounts (NT dollars)
-default.payment.next.month	Target variable (1=Default, 0=Non-default)
-3.2 Data Preparation
-The analysis follows a two-step process:
-1. Data Collection: Gathering historical credit data with features such as income, credit history, loan amount, and employment status
-2. Preprocessing: Data cleaning, handling missing values, normalization of features, and encoding categorical variables
+
+**Figure 1: Credit Risk Assessment Methodology Framework** *(As created by the author of this report)*
+
+The methodology follows a systematic 5-stage approach:
+
+### Process Flow:
+1. **Data Preparation** → Dataset loading, cleaning, and preprocessing
+2. **Model Design** → Algorithm selection and architecture definition  
+3. **Model Training** → Implementation with hyperparameter optimization
+4. **Evaluation** → Performance assessment using multiple metrics
+5. **Implementation and Monitoring** → Deployment and continuous monitoring
+
+### 3.1 Feature Description
+
+| Feature | Description |
+|---------|-------------|
+| `ID` | Unique identification number for each customer |
+| `LIMIT_BAL` | Credit balance given to each customer (NT dollars) |
+| `SEX` | Gender (1=Male, 2=Female) |
+| `EDUCATION` | Education level (1=Graduate, 2=University, 3=High School, 4=Others) |
+| `MARRIAGE` | Marital status (1=Married, 2=Single, 3=Others) |
+| `AGE` | Customer age in years |
+| `PAY_0` to `PAY_6` | Payment history from April to September 2005 |
+| `BILL_AMT1` to `BILL_AMT6` | Bill statement amounts (NT dollars) |
+| `PAY_AMT1` to `PAY_AMT6` | Previous payment amounts (NT dollars) |
+| `default.payment.next.month` | Target variable (1=Default, 0=Non-default) |
+
+### 3.2 Data Preparation Process
+
+The analysis follows a systematic approach:
+
+1. **Data Collection**: Gathering historical credit data with features such as income, credit history, loan amount, and employment status
+2. **Preprocessing**: Data cleaning, handling missing values, normalization of features, and encoding categorical variables
 3.3 Model Selection
 Three models were selected for comparison:
 1. Random Forest (Benchmark Model)
