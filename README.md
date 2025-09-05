@@ -169,13 +169,15 @@ print(f"Accuracy: {accuracy_svm}")
 print(f"Precision: {precision_svm}")
 print(f"Recall: {recall_svm}")
 print(f"F1 Score: {f1_svm}")
+
 Output:
 SVM Performance:
 Accuracy: 0.8185
 Precision: 0.8005514399578606
 Recall: 0.8185
 F1 Score: 0.7929811338886947
-4.3.3 Feedforward Neural Network
+
+## 4.3.3 Feedforward Neural Network
 ## Initialise the Feedforward Neural Network model
 nn_model = Sequential([
     Dense(units=64, activation='relu', input_shape=(X_train_scaled.shape[1],)),
