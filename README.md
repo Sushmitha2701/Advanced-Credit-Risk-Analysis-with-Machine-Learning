@@ -219,14 +219,19 @@ print(f"Accuracy: {accuracy_nn}")
 print(f"Precision: {precision_nn}")
 print(f"Recall: {recall_nn}")
 print(f"F1 Score: {f1_nn}")
+
 Output:
-188/188 [==============================] - 0s 1ms/step
+**Training Output:**
 Feedforward Neural Network Performance:
-Accuracy: 0.8138333333333333
-Precision: 0.7965589328182285
-Recall: 0.8138333333333333
-F1 Score: 0.7993127967151252
-4.3.4 Neural Network with Backpropagation
+| Metric | Value | Percentage |
+|--------|--------|------------|
+| Accuracy | 0.8130 | 81.30% |
+| Precision | 0.7932 | 79.32% |
+| Recall | 0.8130 | 81.30% |
+| F1 Score | 0.7930 | 79.30% |
+
+
+### 4.3.4 Neural Network with Backpropagation
 ## Initialise the model with explicit backpropagation focus
 model_bp = Sequential([
     Dense(units=64, activation='relu', input_shape=(X_train_scaled.shape[1],)),
