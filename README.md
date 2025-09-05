@@ -79,8 +79,6 @@ Where:
 * FP = False Positives
 * FN = False Negatives
 
-
-
 4. Implementation
 4.1 Environment Setup
 import pandas as pd
@@ -555,7 +553,7 @@ Performance Visualisation Results:
 
 
 8.3 Quantitative Results Verification
-Primary Model Performance (Exact Values):
+Primary Model Performance :
 Random Forest Performance:
 	
 Accuracy: 	0.8071666666666667
@@ -610,7 +608,6 @@ References
 3. Khemakhem, S. (2015). Artificial Neural Network architecture for financial risk assessment.
 4. UCI Machine Learning Repository. Credit Card Default Dataset.
 5. Livshits, I. (2015). Recent developments in consumer credit and default literature. Journal of Economic Literature, 53(4), 765-804.
-6. 
 
 Technical Implementation Note: This research provides complete reproducible analysis with exact performance metrics, comprehensive visualisations, and statistical validation. The implementation follows academic standards while providing practical deployment guidelines for financial institutions.
 Repository maintained by: Sushmitha2701
@@ -618,3 +615,4 @@ Repository maintained by: Sushmitha2701
 
 About
 Credit risk analysis using AI is about applying machine learning to assess the likelihood of a borrower defaulting on a loan. By using vast amounts of data, AI can improve accuracy, speed, and efficiency in evaluating creditworthiness compared to traditional methods
+
