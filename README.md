@@ -136,21 +136,27 @@ precision_rf = precision_score(y_test, y_pred_rf, average='weighted')
 recall_rf = recall_score(y_test, y_pred_rf, average='weighted')
 f1_rf = f1_score(y_test, y_pred_rf, average='weighted')
 
+
+
 print("Random Forest Performance:")
 print(f"Accuracy: {accuracy_rf}")
 print(f"Precision: {precision_rf}")
 print(f"Recall: {recall_rf}")
 print(f"F1 Score: {f1_rf}")
+
 Output:
 Random Forest Performance:
 Accuracy: 0.8071666666666667
 Precision: 0.7843208768356785
 Recall: 0.8071666666666667
 F1 Score: 0.7816687648843269
-4.3.2 Support Vector Machine Model
+
+## 4.3.2 Support Vector Machine Model
 Support Vector Machine finds the optimal hyperplane that separates different classes with maximum margin. The algorithm is particularly effective for non-linear data when using kernel functions.
+
 ![SVM Hyperplane](src/images/svm_hyperplane.png)
- Figure 2: Hyperplane Support Vector Machine (Putri et al., 2020)
+Figure 2: Hyperplane Support Vector Machine (Putri et al., 2020)
+
 ## Initialise and train SVM model
 svm_model = SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42)
 svm_model.fit(X_train_scaled, y_train)
