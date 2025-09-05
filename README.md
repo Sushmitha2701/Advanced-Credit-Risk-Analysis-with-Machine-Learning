@@ -395,16 +395,22 @@ Figure 6: Extended model comparison including ensemble methods
 
 
 5. Analysis and Results
-5.1 Model Performance Summary
+## 5.1 Model Performance Summary
+
 Based on the comprehensive analysis, here are the exact performance results:
-Detailed Performance Metrics:
-Model	Accuracy	Precision	Recall	F1 Score
-Random Forest	0.8071666666666667	0.7843208768356785	0.8071666666666667	0.7816687648843269
-SVM	0.8185	0.8005514399578606	0.8185	0.7929811338886947
-Feedforward NN	0.8138333333333333	0.7965589328182285	0.8138333333333333	0.7993127967151252
-NN with Backpropagation	0.813	0.7931577610969767	0.813	0.7930242971354144
-Model Training Configuration:
-Random Forest:
+
+### Detailed Performance Metrics:
+
+| Model | Accuracy | Precision | Recall | F1 Score |
+|-------|----------|-----------|--------|----------|
+| Random Forest | 0.8072 | 0.7843 | 0.8072 | 0.7817 |
+| **SVM** | **0.8185** | **0.8006** | **0.8185** | **0.7930** |
+| Feedforward NN | 0.8138 | 0.7966 | 0.8138 | 0.7993 |
+| NN with Backpropagation | 0.8130 | 0.7932 | 0.8130 | 0.7930 |
+
+
+### Model Training Configuration:
+### Random Forest:
 * n_estimators: 10 (initial), 100 (optimised)
 * random_state: 10 (initial), 42 (standardised)
 * Training split: 80/20
@@ -552,32 +558,39 @@ Performance Visualisation Results:
 * Extended comparison includes ensemble methods for comprehensive evaluation
 
 
-8.3 Quantitative Results Verification
-Primary Model Performance :
-Random Forest Performance:
-	
-Accuracy: 	0.8071666666666667
-Precision: 	0.7843208768356785
-Recall: 	0.8071666666666667
-F1 Score: 	0.7816687648843269
+## 8.3 Quantitative Results Verification
 
-SVM Performance:
-Accuracy: 	0.8185
-Precision: 	0.8005514399578606
-Recall: 	0.8185
-F1 Score: 	0.7929811338886947
+### Random Forest Performance:
+| Metric | Value |
+|--------|--------|
+| Accuracy | 0.8071666666666667 |
+| Precision | 0.7843208768356785 |
+| Recall | 0.8071666666666667 |
+| F1 Score | 0.7816687648843269 |
 
-Feedforward Neural Network Performance:
-Accuracy: 	0.8138333333333333
-Precision: 	0.7965589328182285
-Recall: 	0.8138333333333333
-F1 Score: 	0.7993127967151252
+### SVM Performance:
+| Metric | Value |
+|--------|--------|
+| Accuracy | 0.8185 |
+| Precision | 0.8005514399578606 |
+| Recall | 0.8185 |
+| F1 Score | 0.7929811338886947 |
 
-Neural Network with Backpropagation Performance:
-Accuracy: 	0.813
-Precision: 	0.7931577610969767
-Recall: 	0.813
-F1 Score: 	0.7930242971354144
+### Feedforward Neural Network Performance:
+| Metric | Value |
+|--------|--------|
+| Accuracy | 0.8138333333333333 |
+| Precision | 0.7965589328182285 |
+| Recall | 0.8138333333333333 |
+| F1 Score | 0.7993127967151252 |
+
+### Neural Network with Backpropagation Performance:
+| Metric | Value |
+|--------|--------|
+| Accuracy | 0.813 |
+| Precision | 0.7931577610969767 |
+| Recall | 0.813 |
+| F1 Score | 0.7930242971354144 |
 
 
 8.4 Statistical Significance
