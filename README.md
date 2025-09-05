@@ -44,7 +44,7 @@ The dataset used for analysis contains:
 * Total instances: 30,000
 * Features: 25
 * Source: UCI Machine Learning Repository
-￼
+![Methodology Framework](src/images/methodology_framework.png)
  Figure 1: Credit Risk Assessment Methodology Framework (As created by the author of this report)
 Feature Description
 Feature	Description
@@ -136,9 +136,9 @@ Recall: 0.8071666666666667
 F1 Score: 0.7816687648843269
 4.3.2 Support Vector Machine Model
 Support Vector Machine finds the optimal hyperplane that separates different classes with maximum margin. The algorithm is particularly effective for non-linear data when using kernel functions.
-￼
+![SVM Hyperplane](src/images/svm_hyperplane.png)
  Figure 2: Hyperplane Support Vector Machine (Putri et al., 2020)
-# Initialize and train SVM model
+# Initialise and train SVM model
 svm_model = SVC(kernel='rbf', C=1.0, gamma='scale', random_state=42)
 svm_model.fit(X_train_scaled, y_train)
 
@@ -283,8 +283,8 @@ plt.title('F1 Score')
 
 plt.tight_layout()
 plt.show()
-Output: 
-￼
+Output:
+![Performance Comparison Bar Chart](src/images/performance_comparison_bars.png)
 The bar chart analysis reveals detailed performance metrics across all four key evaluation criteria:
 Performance Analysis from Visualization:
 * Accuracy: SVM shows the highest accuracy, followed closely by Feedforward Neural Network, with Random Forest showing the lowest
@@ -360,8 +360,8 @@ for i, metric in enumerate(scorers.keys()):
 
 plt.tight_layout()
 plt.show()
-Output: 
-￼
+Output:
+![Box Plot Analysis](src/images/box_plot_detailed.png)
 The box plot analysis provides comprehensive statistical distribution insights:
 Key Observations from Box Plot Analysis:
 1. Accuracy Distribution: SVM shows the highest median accuracy with narrow interquartile range, indicating consistent performance
@@ -374,8 +374,8 @@ Statistical Insights:
 * Random Forest exhibits higher variance but maintains competitive baseline performance
 Figure 5: Box Plot of Artificial Neural Network, Support Vector Machine and Random Forest (As created by author of report)
 4.5 Extended Model Comparison Analysis
-Additional Analysis - Alternative Model Performance: 
-￼
+Additional Analysis - Alternative Model Performance:
+![Extended Box Plot Comparison](src/images/extended_models_comparison.png)
 This extended analysis includes comparison with additional models:
 1. Voting Classifier: Ensemble approach combining multiple algorithms
 2. Random Forest: Tree-based ensemble method
@@ -398,14 +398,14 @@ Feedforward NN	0.8138333333333333	0.7965589328182285	0.8138333333333333	0.799312
 NN with Backpropagation	0.813	0.7931577610969767	0.813	0.7930242971354144
 Model Training Configuration:
 Random Forest:
-* n_estimators: 10 (initial), 100 (optimized)
-* random_state: 10 (initial), 42 (standardized)
+* n_estimators: 10 (initial), 100 (optimised)
+* random_state: 10 (initial), 42 (standardised)
 * Training split: 80/20
 Support Vector Machine:
 * kernel: 'rbf'
 * C: 1.0
 * gamma: 'scale'
-* Feature standardization: Applied
+* Feature standardisation: Applied
 * random_state: 42
 Neural Networks:
 * Architecture: 64-32-16-1 neurons
@@ -501,31 +501,7 @@ credit-risk-analysis/
 │   └── utils/
 ├── requirements.txt
 └── other project files
-7.2 Image Files Required
-The following images are extracted from your original research and should be included in the images/ folder:
-Core Methodology and Framework:
-* methodology_framework.png - Workflow diagram showing: Data Preparation → Model Design → Model Training → Evaluation → Implementation and Monitoring
-Technical Diagrams:
-* svm_hyperplane.png - Support Vector Machine hyperplane illustration showing maximum margin, optimal hyperplane, support vectors, positive and negative class separation
-Performance Analysis Visualizations:
-* performance_comparison_bars.png - Comprehensive bar chart analysis showing accuracy, precision, recall, and F1 scores across Random Forest, SVM, and Feedforward Neural Network with color-coded metrics (Blue: Accuracy, Green: Precision, Red: Recall, Purple: F1 Score)
-* box_plot_detailed.png - Statistical box plot analysis showing distribution of accuracy, precision, recall, and F1 metrics across the three primary models with quartile ranges and outliers
-* extended_models_comparison.png - Additional box plot comparing extended model set including Voting Classifier, Random Forest, Gradient Boost, and Logistic Regression with performance range from 0.76 to 0.83
-Performance Results Summary:
-Based on the extracted visualizations, the complete performance analysis shows:
-Bar Chart Results:
-* SVM consistently outperforms across all metrics
-* Neural Networks maintain competitive second position
-* Random Forest provides stable baseline performance
-Box Plot Statistical Analysis:
-* SVM shows lowest variance and highest median performance
-* Cross-validation demonstrates model stability
-* Performance metrics range consistently between 0.78-0.83 for top-performing models
-Extended Model Comparison:
-* Additional models (Voting Classifier, Gradient Boost) show comparable performance
-* Logistic Regression provides traditional statistical baseline
-* Ensemble methods demonstrate competitive results
-7.3 Installation and Usage
+7.2 Installation and Usage
 # Clone the repository
 git clone https://github.com/Sushmitha2701/Advanced-Credit-Risk-Analysis-with-Machine-Learning.git
 
@@ -534,7 +510,7 @@ pip install -r requirements.txt
 
 # Run the analysis
 python src/model_training.py
-7.4 Dependencies
+7.3 Dependencies
 pandas>=1.3.0
 numpy>=1.21.0
 scikit-learn>=1.0.0
@@ -586,13 +562,6 @@ The box plot analysis reveals:
 * SVM achieves highest median performance with minimal variance
 * Cross-validation confirms consistent results across different data splits
 * Statistical distribution supports model selection recommendations
-8.5 Final Notes
-This merged document now includes:
-* All exact performance outputs from your models
-* References to all your original figures
-* Complete code implementations
-* Proper academic structure
-* GitHub-ready formatting
 9. Implementation Guide
 9.1 Complete Setup Instructions
 1. Clone Repository Structure
@@ -604,7 +573,7 @@ python src/model_training.py
 python src/evaluation.py
 python src/visualization.py
 9.2 Expected Output Verification
-Your implementation should reproduce the exact numerical results shown in the quantitative results section, along with the visualizations matching the provided image analyses.
+Your implementation should reproduce the exact numerical results shown in the quantitative results section, along with the visualisations matching the provided image analyses.
 
 References
 1. Brown, K., & Moles, P. (2008). Credit Risk Management. Edinburgh Business School.
@@ -613,7 +582,7 @@ References
 4. UCI Machine Learning Repository. Credit Card Default Dataset.
 5. Livshits, I. (2015). Recent developments in consumer credit and default literature. Journal of Economic Literature, 53(4), 765-804.
 
-Technical Implementation Note: This research provides complete reproducible analysis with exact performance metrics, comprehensive visualizations, and statistical validation. The implementation follows academic standards while providing practical deployment guidelines for financial institutions.
+Technical Implementation Note: This research provides complete reproducible analysis with exact performance metrics, comprehensive visualisations, and statistical validation. The implementation follows academic standards while providing practical deployment guidelines for financial institutions.
 Repository maintained by: Sushmitha2701
-
-
+About
+Credit risk analysis using AI is about applying machine learning to assess the likelihood of a borrower defaulting on a loan. By using vast amounts of data, AI can improve accuracy, speed, and efficiency in evaluating creditworthiness compared to traditional methods
